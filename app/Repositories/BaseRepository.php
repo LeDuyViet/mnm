@@ -79,7 +79,7 @@ abstract class BaseRepository
      * @param $id
      * @return BaseRepository
      */
-    public function update(array $input, $id): BaseRepository
+    public function update(array $input, $id)
     {
         $model = $this->model->findOrFail($id);
         $model->fill($input);

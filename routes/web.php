@@ -77,7 +77,7 @@ Route::middleware('auth')->group(function(){
         Route::post('/', 'store')->name('store');
         Route::get('/create', 'create')->name('create')->middleware('permission:create-user');
         Route::get('/{coupon}', 'show')->name('show')->middleware('permission:show-user');
-        Route::put('/{coupon}', 'update')->name('update')->middleware('permission:update-user');
+        Route::put('/{id}', 'update')->name('update')->middleware('permission:update-user');
         Route::delete('/{coupon}', 'destroy')->name('destroy')->middleware('permission:delete-user');
         Route::get('/{coupon}/edit', 'edit')->name('edit')->middleware('permission:update-user');
     });
@@ -113,7 +113,7 @@ Route::middleware('auth')->group(function(){
             Route::get('/{coupon}/edit', 'edit')->name('edit')->middleware('permission:update-coupon');
     });
 
-    Route::get('orders', [AdminOrderController::class, 'index'])->name('admin.orders.index')->middleware('list-order');
+    Route::get('orders', [AdminOrderController::class, 'index'])->name('admin.orders.index');
     Route::post('update-status/{id}', [AdminOrderController::class, 'updateStatus'])->name('admin.orders.update_status')->middleware('list-order');
 
 

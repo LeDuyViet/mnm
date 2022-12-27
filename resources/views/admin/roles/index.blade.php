@@ -9,7 +9,7 @@
 
 
         <h1>
-            Role list
+            Role list 1
         </h1>
         <div>
             <a href="{{ route('roles.create') }}" class="btn btn-primary">Create</a>

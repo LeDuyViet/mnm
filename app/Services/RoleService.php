@@ -35,7 +35,7 @@ class RoleService
      * @param $id
      * @return BaseRepository
      */
-    public function update($request, $id): BaseRepository
+    public function update($request, $id)
     {
         $dataUpdate = $request->all();
         $role = $this->roleRepository->update($dataUpdate, $id);

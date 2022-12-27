@@ -19,7 +19,7 @@
                         @enderror
                     </div>
                     <div class="col-5">
-                        <img src="{{ $product->images ? asset('upload/' . $product->images->first()->url) : 'upload/default.png' }}"
+                        <img src="{{ $product->images ? asset('storage/upload/' . $product->images->first()->url) : 'upload/default.png' }}"
                             id="show-image" alt="">
                     </div>
                 </div>

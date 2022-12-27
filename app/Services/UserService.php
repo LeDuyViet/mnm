@@ -42,7 +42,7 @@ class UserService
      * @param $id
      * @return BaseRepository
      */
-    public function update($request, $id): BaseRepository
+    public function update($request, $id)
     {
         $dataUpdate = $request->except('password');
         $user = $this->findOrFail($id);
@@ -68,9 +68,9 @@ class UserService
 
     /**
      * @param $id
-     * @return int
+     * @return void
      */
-    public function delete($id): int
+    public function delete($id)
     {
         $user = $this->findOrFail($id);
         $user->destroyImage($user?->images?->first()?->url);

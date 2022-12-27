@@ -12,6 +12,9 @@ class Product extends Model
 {
     use HasFactory, HandleImageTrait, Imaginable;
 
+    const IMAGE_SAVE_PATH = 'storage/upload/';
+    const IMAGE_SHOW_PATH = 'storage/upload/';
+
     protected $fillable = [
         'name',
         'description',

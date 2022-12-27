@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 
+use App\Models\Product;
 use App\Models\Role;
 use App\Repositories\BaseRepository;
 
@@ -9,7 +10,7 @@ class ProductRepository extends BaseRepository
 
     public function model()
     {
-        return Role::class;
+        return Product::class;
     }
 
     /**
